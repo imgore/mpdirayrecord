@@ -1,0 +1,14 @@
+.submitPage {
+  /* color: black; */
+  text-align: center;
+   height: 15vh; 
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  /* background-size: cover !important; */
+  display: flex;
+  /* align-items: center; */
+   justify-content: center; 
+}
+
+.submitRadio {
+  align-content: center;
+}

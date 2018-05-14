@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/landing/landing",
+    "pages/submit/submit",
+    "pages/stories/stories",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eeeeee",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "color": "#8ac007",
+    "borderStyle": "black",
+    "backgroundColor": "#8ac007"	
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/landing/landing",
+        "text": "HOME"
+      },
+      {
+        "pagePath": "pages/submit/submit",
+        "text": "POST"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

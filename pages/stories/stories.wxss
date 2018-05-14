@@ -1,0 +1,70 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 20vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  font-size: 15px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(111, 110, 110, 10);
+}
+
+.title {
+  font-size: 25px;
+  font-weight: lighter;
+  /* color: rgb(255, 255, 255); */
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.teaser {
+  font-size: 15px;
+  font-weight: lighter;
+  /* color: rgb(255, 255, 255); */
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.flexBox {
+  text-align: center;
+  background-size: cover !important;
+  border-radius: 25px;
+  border: 2px solid #8ac007;
+  padding: 20px;
+  width: 200px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.storyTitle {
+  border: 4px;
+  /* display: flex; */
+  font-size: 15px;
+  text-align: center;
+  background-size: cover !important;
+  /* border-radius: 25px; *//* border: 2px solid #8ac007; */
+  padding: 20px;
+  width: 200px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.storyText {
+  font-size: 15px;
+  /* display: flex; */
+}
+
+/* 
+.story {
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left:auto;
+} */
