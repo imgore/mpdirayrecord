@@ -2,16 +2,14 @@
   color: white;
   text-align: center;
   height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); *//* background-size: cover !important; */
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+   background-size: cover !important; 
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(pages/image/0.png);
-  /* background-image:url(../image/Click_03_temp.png);  */
   background-repeat: no-repeat;
-  /* background-size:100% 100%; */
-  background-size: cover; /*等了比例拉伸*/
-  -moz-background-size: 100% 100%;
+   /* background-size: cover; 等了比例拉伸  */
+  /* -moz-background-size: 100% 100%; */
 }
 
 .title {
