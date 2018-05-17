@@ -1,10 +1,11 @@
-<view class="submitPage">
-  <radio class="submitRadio" color="black" disabled='false' ></radio>
-</view>
-<view class="section">
-  <textarea bindinput = "bindInputToData" class="submitInput" placeholder="{{text}}" value="{{clearText}}" auto-focus></textarea>
-  <view class="btn-area">
-    <button bindtap = 'submitTextToStories'>Submit</button>
+<view class="image" style = "background-image: url('../image/storiesbackground.jpg');">
+  <view class="submitPage">
+    <radio class="submitRadio" color="black" disabled='false'></radio>
+  </view>
+  <view class="section">
+    <textarea bindinput="bindInputToData" class="submitInput" placeholder="{{text}}" value="{{clearText}}" auto-focus></textarea>
+    <view class="btn-area">
+      <button bindtap='submitTextToStories'>Submit</button>
+    </view>
   </view>
 </view>
-

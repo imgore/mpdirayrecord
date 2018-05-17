@@ -38,7 +38,11 @@ App({
     appid: '1111',//appid需自己提供，此处的appid我随机编写    
     secret: '2222',//secret需自己提供，此处的secret我随机编写   
     openid: '', //自定义  
-    arrStories: [[]],
+    arrStories: [{
+      "id": '',
+      "time": '',
+      "text": ''
+    }],
     userInfo: null
   },  
 })

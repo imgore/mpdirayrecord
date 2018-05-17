@@ -9,7 +9,11 @@ Page({
     myStoryTime: 'myStoryTime',
     myStoryText: 'myStoryText',
     // arrStory: [],
-    arrStories: [[]],
+    arrStories: [{
+      "id": '',
+      "time": '',
+      "text": ''
+    }],
     title: 'Record my stories',
     teaser: 'Share my memories forever'
   },
@@ -37,26 +41,49 @@ Page({
 
     try {
       tmpStoryText = wx.getStorageSync('wxInputText')
-      if (tmpStoryText) {
+      if (tmpStoryText != '') {
         tmpArrStories = tmpStoryText.split('@')
       }
+      else
+        return
     } catch (e) {
       console.log('Can not getStorageSync' + e)
       return
     }
     console.log('tmpArrStories:' + tmpArrStories)
 
-    console.log(app.globalData)
+    console.log('app.globalData:' + app.globalData)
     // tmpArrStories.push(this.data.arrStories.length) //给每组数据编号
-    var arrStories = [[]]
+    var arrStories = [{
+      "id": '',
+      "time": '',
+      "text": ''
+    }]
+    var tmp = {
+      "id": '',
+      "time": '',
+      "text": ''
+    }
+
     arrStories = app.globalData.arrStories
     console.log('arrStories:' + arrStories)
+    tmp.id = arrStories.length
 
-    if (arrStories[0][0] == null) {
-      arrStories[0] = tmpArrStories
+    try {
+      if (tmpArrStories[0])
+        tmp.time = tmpArrStories[0]
+      if (tmpArrStories[1])
+        tmp.text = tmpArrStories[1]
+    }
+    catch(e) {
+      console.log("tmpArrStories has something wrong with:" + e)
+    }
+
+    if (arrStories[0].text == null) {
+      arrStories[0] = tmp
     }
     else {
-      arrStories.push(tmpArrStories) //push data to arrStories.
+      arrStories.push(tmp) //push data to arrStories.
     }
     console.log('Get arrStories:' + arrStories)
 
