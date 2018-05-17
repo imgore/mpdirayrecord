@@ -1,35 +1,44 @@
 .banner {
   color: white;
-  text-align: center;
+  text-align: center;  
   height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-   background-size: cover !important; 
+
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  background-repeat: no-repeat;
-   /* background-size: cover; 等了比例拉伸  */
-  /* -moz-background-size: 100% 100%; */
+
+
+  /* 等比例拉伸  */
+  background-size: cover;
+  -moz-background-size: 100% 100%;
+}
+.banner-content {
+  margin-top:140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
-  font-size: 80rpx;
+  font-size: 70rpx;
   font-weight: bold;
   text-shadow: 4px 6px rgba(0, 0, 0, 0.2);
   /* margin-top: 100rpx; */
-  margin-bottom: 350rpx;
+  margin-bottom: 170rpx;
+  margin-top: -20rpx;
 }
 
 .teaser {
-  font-size: 50rpx;
+  font-size: 40rpx;
   font-weight: lighter;
-  color: rgb(255, 255, 255);
-  opacity: 0.9;
-  /* margin: auto,auto,5000rpx,auto; */
-  /* margin-bottom: 1000rpx; */
-  margin-top: 700rpx;
+  color:blanchedalmond;
+  opacity: 0.6;
+  margin: auto,auto,5000rpx,auto; 
+  margin-bottom: 150rpx;
 }
 
 .magrin {
-  display: flex;
+  color:blueviolet;
 }

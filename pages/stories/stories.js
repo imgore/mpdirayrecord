@@ -1,4 +1,5 @@
 // pages/stories/stories.js
+const app = getApp()
 Page({
 
   /**
@@ -8,7 +9,9 @@ Page({
     myStoryTime: 'myStoryTime',
     myStoryText: 'myStoryText',
     // arrStory: [],
-    arrStories: [[]]
+    arrStories: [[]],
+    title:'Record my stories',
+    teaser:'Share my memories forever'
   },
 
   /**
@@ -16,39 +19,6 @@ Page({
    */
   onLoad: function (options) {
 
-    // var tmpStoryText = ''
-    // var tmpArrStories = []
-    // //get storage Sync
-    // try {
-    //   tmpStoryText = wx.getStorageSync('wxInputText')
-    //   if (tmpStoryText) {
-    //     tmpArrStories = tmpStoryText.split('@')
-    //   }
-    // } catch (e) {
-    //   console.log('Can not getStorageSync' + e)
-    // }
-
-    // console.log(this.data.arrStories.length)
-    // tmpArrStories.push(this.data.arrStories.length) //给每组数据编号
-    // console.log(tmpArrStories)
-
-    // var arrStories = this.data.arrStories
-    // if (!arrStories[0][0]) {
-    //   arrStories[0] = tmpArrStories
-    // }
-    // else
-    //   arrStories.push(tmpArrStories) //压入数据数组
-
-    // console.log(arrStories)
-    // this.setData({
-    //   arrStories: arrStories
-    // })
-
-    // //Storage arrStories
-    // try {
-    //   wx.setStorageSync('arrStories', arrStories)
-    // } catch (e) {
-    // }
   },
 
   /**
@@ -72,35 +42,44 @@ Page({
       }
     } catch (e) {
       console.log('Can not getStorageSync' + e)
+      return
     }
-
-    console.log(this.data.arrStories.length)
-    tmpArrStories.push(this.data.arrStories.length) //给每组数据编号
     console.log(tmpArrStories)
 
-    var arrStories = this.data.arrStories
+    // console.log(arrStories.length)
+    // tmpArrStories.push(this.data.arrStories.length) //给每组数据编号
+    var arrStories = app.globalData.arrStories
+    console.log(arrStories)
+
     if (arrStories[0][0] == null) {
       arrStories[0] = tmpArrStories
     }
     else {
-      try {
-        arrStories = wx.getStorageSync('arrStories')
-      } catch (e) {
-        console.log('Can not getStorageSync' + e)
-      }
       arrStories.push(tmpArrStories) //push data to arrStories.
     }
     console.log('Get arrStories:' + arrStories)
+
+    //Storage to glabalData and show
+    if (arrStories)
+    getApp().globalData.arrStories = arrStories
 
     this.setData({
       arrStories: arrStories
     })
 
-    //Storage arrStories
+    //Clear before storage
     try {
-      wx.setStorageSync('arrStories', this.data.arrStories)
+      wx.clearStorageSync()
     } catch (e) {
+      // Do something when catch error
+      console.log('Error clearStorageSync:' + e)
     }
+
+    // //Storage arrStories
+    // try {
+    //   wx.setStorageSync('arrStories', this.data.arrStories)
+    // } catch (e) {
+    // }
   },
 
   /**

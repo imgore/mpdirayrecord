@@ -6,7 +6,7 @@ Page({
    */
   data: {
     title: 'Record my Stories',
-    text: 'Share my memories foever...'
+    text: 'Share my memories forever...'
   },
 
   /**
@@ -66,7 +66,7 @@ Page({
   },
 
   goToSubmitPage: function() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/submit/submit',
     })
   }

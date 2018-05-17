@@ -29,17 +29,25 @@ Page({
           title: time,
           // duration: 200000
         })
-      else
-        {
+      else {
         wx.showToast({
           title: 'No data!' + time,
           // duration: 200000
         })
-        }
+      }
+
+      //Clear before storage
+      try {
+        wx.clearStorageSync()
+      } catch (e) {
+        // Do something when catch error
+        console.log('Error clearStorageSync:' + e)
+      }
 
       try {
         wx.setStorageSync('wxInputText', time + '@' + this.data.inputText)
       } catch (e) {
+        console.log('Error setStorageSync:' + e)
       }
 
       try {
@@ -84,14 +92,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
@@ -101,7 +109,7 @@ Page({
     //Initiate textarea
     this.setData({
       clearText: ''
-    })    
+    })
   },
 
   /**

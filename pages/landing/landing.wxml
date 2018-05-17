@@ -6,5 +6,5 @@
     <view class='margin'/>
         <button size='mini' type="primary" bindtap='goToSubmitPage'>Get Started</button>
     </view>
+    <text class='teaser'>{{text}}</text>
 </view>
-<text class='teaser'>{{text}}</text>

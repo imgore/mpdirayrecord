@@ -1,11 +1,12 @@
 .banner {
-  color: white;
+   color: white; 
   text-align: center;
   height: 20vh;
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position-y: -220rpx;
 }
 
 .banner-content {
@@ -44,11 +45,13 @@
 
 .storyTitle {
   border: 4px;
-  /* display: flex; */
+
+
   font-size: 15px;
   text-align: center;
   background-size: cover !important;
-  /* border-radius: 25px; *//* border: 2px solid #8ac007; */
+
+
   padding: 20px;
   width: 200px;
   height: 20px;
@@ -58,13 +61,6 @@
 
 .storyText {
   font-size: 15px;
-  /* display: flex; */
+  
 }
 
-/* 
-.story {
-  justify-content: center;
-  align-items: center;
-  margin-right: auto;
-  margin-left:auto;
-} */

@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/landing/landing",
     "pages/submit/submit",
     "pages/stories/stories",
+    "pages/landing/landing",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -20,6 +20,10 @@
       {
         "pagePath": "pages/landing/landing",
         "text": "HOME"
+      },
+      {
+        "pagePath": "pages/stories/stories",
+        "text": "STORIES"
       },
       {
         "pagePath": "pages/submit/submit",
