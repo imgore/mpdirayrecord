@@ -10,8 +10,8 @@ Page({
     myStoryText: 'myStoryText',
     // arrStory: [],
     arrStories: [[]],
-    title:'Record my stories',
-    teaser:'Share my memories forever'
+    title: 'Record my stories',
+    teaser: 'Share my memories forever'
   },
 
   /**
@@ -44,12 +44,13 @@ Page({
       console.log('Can not getStorageSync' + e)
       return
     }
-    console.log(tmpArrStories)
+    console.log('tmpArrStories:' + tmpArrStories)
 
-    // console.log(arrStories.length)
+    console.log(app.globalData)
     // tmpArrStories.push(this.data.arrStories.length) //给每组数据编号
-    var arrStories = app.globalData.arrStories
-    console.log(arrStories)
+    var arrStories = [[]]
+    arrStories = app.globalData.arrStories
+    console.log('arrStories:' + arrStories)
 
     if (arrStories[0][0] == null) {
       arrStories[0] = tmpArrStories
@@ -61,7 +62,9 @@ Page({
 
     //Storage to glabalData and show
     if (arrStories)
-    getApp().globalData.arrStories = arrStories
+      getApp().globalData.arrStories = arrStories
+    else
+      return
 
     this.setData({
       arrStories: arrStories

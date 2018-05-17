@@ -13,12 +13,13 @@
 
 <view class="story">
   <view class="flexBox">
-    <view class="storyTitle">{{myStoryTime}}</view>
-    <text class="storyText">{{myStoryText}}</text>
-  </view>
-</view>
+    <!-- <view class="storyTitle">{{myStoryTime}}</view>
+    <text class="storyText">{{myStoryText}}</text> -->
+
 
 <block wx:for="{{arrStories}}">
-  <!-- <view>{{index}}</view> -->
-  <view>{{item}}</view>
+   <view class="storyTitle">{{index}}</view> 
+  <view class="storyText">{{item}}</view>
 </block>
+  </view>
+</view>
