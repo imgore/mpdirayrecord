@@ -1,11 +1,16 @@
-<view class="image" style = "background-image: url('../image/storiesbackground.jpg');">
-  <view class="submitPage">
-    <radio class="submitRadio" color="black" disabled='false'></radio>
+<view class="banner" style="background-image:url('../image/home.jpg');"> 
+<!-- <view class="banner" > -->
+  <view class="banner-content">
+    <view class='title'></view>
   </view>
-  <view class="section">
-    <textarea bindinput="bindInputToData" class="submitInput" placeholder="{{text}}" value="{{clearText}}" auto-focus></textarea>
-    <view class="btn-area">
-      <button bindtap='submitTextToStories'>Submit</button>
-    </view>
+  <text class='teaser'></text>
+</view>
+<!-- <view class="image" style="background-image: url('../image/storiesbackground.jpg');"> -->
+<view class="image" >
+  <view class="text">
+    <textarea class="textarea" bindinput="bindInputToData" class="submitInput" placeholder="{{text}}" value="{{clearText}}" auto-focus></textarea>
+  </view>
+  <view class="btn-area">
+    <button type="primary" size="default" bindtap='submitTextToStories'>Submit</button>
   </view>
 </view>

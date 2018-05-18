@@ -1,17 +1,44 @@
-.image {
-  /* background-image: url('../image/storiesbackground.jpg'); */  
-   height: 100vh; 
-}
-.submitPage {
-  color: black; 
+.banner {
+  /* color: white; */
+  background-color: antiquewhite;
   text-align: center;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  /* background-size: cover !important; */
+  height: 15vh;
   display: flex;
-   align-items: center; 
-   justify-content: center; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-position-y: -550rpx;
 }
 
-.submitRadio {
-  align-content: center;
+.image {
+  /* background-image: url('../image/storiesbackground.jpg'); */
+  background-size: cover !important;
+  height: 80vh;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+.text {
+  background-size: cover !important;
+  border-radius: 10px;
+  border: 2px solid #8ac007;
+  padding: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.textarea {
+  background-size: cover !important;
+  border-radius: 25px;
+  border: 2px solid #8ac007;
+  padding: 20px;
+}
+
+.btn-area {
+  padding: 20px;
 }
