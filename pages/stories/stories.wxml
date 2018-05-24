@@ -1,4 +1,5 @@
-<view class="home" style="background-image:url('../image/storiesbackground.jpg');">
+<!-- <view class="home" style="background-image:url('../image/storiesbackground.jpg');"> -->
+<view class="home" >
   <view class="banner" style="background-image:url('../image/home.jpg');">
     <view class="banner-content">
       <view class='title'>{{title}}</view>
